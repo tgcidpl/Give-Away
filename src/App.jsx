@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './pages/home/home.jsx';
-import { GiveAway } from './pages/give-away/give-away.jsx';
-import { LogIn } from './pages/login/Login.jsx';
-import { LogOut } from './pages/logout/Logout.jsx';
-import { SignUp } from './pages/sign-up/sign-up.jsx';
+import { Home } from './pages/home.jsx';
+import { GiveAway } from './pages/give-away.jsx';
+import { LogIn } from './pages/login.jsx';
+import { LogOut } from './pages/logout.jsx';
+import { SignUp } from './pages/sign-up.jsx';
 
 
 function App() {
