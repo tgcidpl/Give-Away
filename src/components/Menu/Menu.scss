@@ -1,0 +1,36 @@
+@import '../../scss/settings/colors.scss';
+
+.Menu {
+  margin-top: 3rem;
+  &-auth{
+    display: flex;
+    justify-content: flex-end;
+    &__link{
+      color: #737373;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.6rem 0.9rem;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid $accentColor;
+      }
+    }
+  }
+  &-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.4rem;
+
+    &__link {
+      font-size: 1.1rem;
+      padding: 0.6rem 0.9rem;
+      border: 1px solid transparent;
+      white-space: nowrap;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $textColor;
+      }
+    }
+  }
+}

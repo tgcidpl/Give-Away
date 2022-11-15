@@ -1,0 +1,17 @@
+.NavHeader {
+  max-width: 1758px;
+  height: 100vh;
+  display: flex;
+  &-banner {
+    width: 50%;
+    max-height: 100vh;
+    background-image: url(../../assets/Home-Hero-Image.jpg);
+    background-size: cover;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+  }
+  &-header {
+    width: 40%;
+    height: 100vh;
+  }
+}
