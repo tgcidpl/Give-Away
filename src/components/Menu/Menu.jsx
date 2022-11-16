@@ -11,8 +11,8 @@ export function Menu () {
                 <li><Link className='Menu-auth__link' to='/sign-up'>Sign Up</Link></li>
             </ul>
             <ul className='Menu-nav'>
-                <li><ScrollLink className='Menu-nav__link' to=''>Home</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to=''>Purpose</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='Menu'>Home</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='ThreeColumns'>What's It About?</ScrollLink></li>
                 <li><ScrollLink className='Menu-nav__link' to=''>About Us</ScrollLink></li>
                 <li><ScrollLink className='Menu-nav__link' to=''>Foundation and Organisations</ScrollLink></li>
                 <li><ScrollLink className='Menu-nav__link' to=''>Contact</ScrollLink></li>

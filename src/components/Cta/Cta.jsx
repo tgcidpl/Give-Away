@@ -6,12 +6,12 @@ import {LargeBtn} from "../LargeBtn/LargeBtn.jsx"
 export function Cta() {
     return (
         <div className='Cta'>
-            <DecoratedHeader text1={`Zacznij pomagać!`}
-                             text2={`Oddaj niechciane rzeczy w zaufane ręce`}
+            <DecoratedHeader text1={`Start helping!`}
+                             text2={`Give away unwanted things with confidence`}
             />
             <div className='Cta-btns'>
-                <LargeBtn text={`ODDAJ RZECZY`} link={`/login`}/>
-                <LargeBtn text={`ZORGANIZUJ ZBIÓRKĘ`} link={`/login`}/>
+                <LargeBtn text={`GIVE AWAY`} link={`/login`}/>
+                <LargeBtn text={`ORGANISE COLLECTION`} link={`/login`}/>
             </div>
         </div>
     )
