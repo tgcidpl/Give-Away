@@ -1,0 +1,14 @@
+@import '../../scss/settings/colors.scss';
+
+.LargeBtn {
+  display: inline-block;
+  font-size: 2.25rem;
+  border: 1px solid $textColor;
+  width: 19.375rem;
+  height: 7.5rem;
+  margin: 1.375rem;
+  &-link {
+    text-decoration: none;
+    color: $textColor;
+  }
+}
