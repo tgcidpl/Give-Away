@@ -11,11 +11,11 @@ export function Menu () {
                 <li><Link className='Menu-auth__link' to='/sign-up'>Sign Up</Link></li>
             </ul>
             <ul className='Menu-nav'>
-                <li><ScrollLink className='Menu-nav__link' to='Menu'>Home</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to='ThreeColumns'>What's It About?</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to=''>About Us</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to=''>Foundation and Organisations</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to=''>Contact</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='Menu' smooth='easeOutQuad'>Home</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='WhatsItAbout' smooth='easeOutQuad'>What's It About?</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='' smooth='easeOutQuad'>About Us</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='' smooth='easeOutQuad'>Foundation and Organisations</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='' smooth='easeOutQuad'>Contact</ScrollLink></li>
             </ul>
         </div>
     )

@@ -1,0 +1,31 @@
+@import '../../scss/settings/fonts.scss';
+@import '../../scss/settings/colors.scss';
+
+.WhatsItAbout {
+
+  &-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20rem;
+    background-color: $lightBackgroundColor;
+
+    &-column {
+
+      &__title {
+
+      }
+
+      &__text {
+
+      }
+    }
+  }
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+  }
+}
