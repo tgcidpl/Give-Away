@@ -2,6 +2,7 @@
   font-size: 2.375rem;
   > h2 {
     margin-top: 0.5rem;
+    white-space: nowrap;
   }
   &_bottomText {
     &::after {
