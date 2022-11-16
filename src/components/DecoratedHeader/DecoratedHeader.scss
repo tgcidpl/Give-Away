@@ -1,0 +1,16 @@
+.DecoratedHeader {
+  font-size: 2.375rem;
+  > h2 {
+    margin-top: 0.5rem;
+  }
+  &_bottomText {
+    &::after {
+      content: " ";
+      display: block;
+      margin: 1.5rem auto;
+      width: 15.8rem;
+      height: 2rem;
+      background-image: url(../../assets/Decoration.svg);
+    }
+  }
+}
