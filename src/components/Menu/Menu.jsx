@@ -12,9 +12,9 @@ export function Menu () {
             </ul>
             <ul className='Menu-nav'>
                 <li><ScrollLink className='Menu-nav__link' to='Menu' smooth='easeOutQuad'>Home</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to='WhatsItAbout' smooth='easeOutQuad'>What's It About?</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to='' smooth='easeOutQuad'>About Us</ScrollLink></li>
-                <li><ScrollLink className='Menu-nav__link' to='' smooth='easeOutQuad'>Foundation and Organisations</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' offset={-40} to='WhatsItAbout' smooth='easeOutQuad'>What's It About?</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' offset={10} to='AboutUs' smooth='easeOutQuad'>About Us</ScrollLink></li>
+                <li><ScrollLink className='Menu-nav__link' to='Foundation' smooth='easeOutQuad'>Foundation and Organisations</ScrollLink></li>
                 <li><ScrollLink className='Menu-nav__link' to='' smooth='easeOutQuad'>Contact</ScrollLink></li>
             </ul>
         </div>
