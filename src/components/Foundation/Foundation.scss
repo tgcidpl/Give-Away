@@ -1,0 +1,30 @@
+@import '../../scss/settings/fonts.scss';
+@import '../../scss/settings/colors.scss';
+
+.Foundation {
+    height: 100vh;
+
+    &-selector {
+        display: flex;
+        justify-content: center;
+
+        &__button {
+                display: flex;
+                font-size: 1.5rem;
+                width: 14rem;
+                height: 4rem;
+                margin: 1.375rem;
+                text-decoration: none;
+                color: $textColor;
+                align-items: center;
+                justify-content: center;
+                padding: 0 4rem;
+                border: transparent;
+                &:hover{
+                  background-color: $accentColor;
+                border: 1px solid $textColor;
+                  cursor: pointer;
+              }
+        }
+}
+}

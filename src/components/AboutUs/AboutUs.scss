@@ -1,0 +1,29 @@
+@import "../../scss/settings/colors.scss";
+
+.AboutUs {
+  display: flex;
+  background-color: $lightBackgroundColor;
+  height: 100vh;
+  align-items: center;
+  &-description {
+    width: 50vw;
+  	  > p {
+    position: relative;
+      font-size: 1.4rem;
+      margin: 1rem 6rem;
+      letter-spacing: -0.6px;
+      line-height: 2.5rem;
+      &::after {
+        content: url(../../assets/Signature.svg);
+				position: absolute;
+				transform: translate(-60%, 40%);
+      }
+    }
+  }
+  &-image {
+    width: 50vw;
+		height: 100vh;
+		background-image: url(../../assets/People.jpg);
+		background-size: cover;
+  }
+}

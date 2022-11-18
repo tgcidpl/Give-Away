@@ -1,0 +1,8 @@
+[
+    {"id": 1, "name": "Lorem Ipsum 1","goals": "Quis varius quam quisque id diam vel quam elementum pulvinar.","items": "egestas, sed, tempus"},
+    {"id": 2, "name": "Lorem Ipsum 2","goals": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.","items": "ut, aliquam, purus, sit, amet"},
+    {"id": 3, "name": "Lorem Ipsum 3","goals": "Scelerisque in dictum non consectetur a erat nam.","items": "mi, quis, hendrerit, dolor" },
+    {"id": 4, "name": "Lorem ip1","goals": "Some text for organisation1.","items": "item1, item2, item3" },
+    {"id": 5, "name": "Lorem ip2","goals": "Some text for organisation2.","items": "item1, item2, item3" },
+    {"id": 6, "name": "Lorem ip3","goals": "Some text for organisation3.","items": "item1, item2, item3" }
+  ]
