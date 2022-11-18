@@ -8,7 +8,7 @@ import { LogOut } from './pages/logout.jsx';
 import { SignUp } from './pages/sign-up.jsx';
 
 
-function App() {
+export default function App() {
     return (
         <Router>
             <Routes>
@@ -21,5 +21,3 @@ function App() {
         </Router>
     )
 }
-
-export default App
