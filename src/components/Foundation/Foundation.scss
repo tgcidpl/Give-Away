@@ -19,10 +19,11 @@
                 align-items: center;
                 justify-content: center;
                 padding: 0 4rem;
-                border: transparent;
+                border: 1px solid ;
+                border-color: $textColor;
                 &:hover{
                   background-color: $accentColor;
-                border: 1px solid $textColor;
+            
                   cursor: pointer;
               }
         }

@@ -7,7 +7,6 @@ import './Foundation.scss';
 export const Foundation = () => {
     const [tab, setTab] = useState(`foundations`)
 
-console.log(tab)
     const handleClick = (e, name) => {
         setTab(name)
     }
@@ -18,17 +17,20 @@ console.log(tab)
         <div className='Foundation-selector'>
             <span
             onClick={e => handleClick(e, `foundations`)}
-             className='Foundation-selector__button'>
+             className='Foundation-selector__button'
+             style={tab!==`foundations` ? {borderColor:'transparent'} : {}}>
                 Foundations
                 </span>
             <span 
             onClick={e => handleClick(e, `organisations`)}
-            className='Foundation-selector__button'>
+            className='Foundation-selector__button'
+            style={tab!==`organisations` ? {borderColor:'transparent'} : {}}>
                 Non-Gov Organisations
                 </span>
             <span 
             onClick={e => handleClick(e, `collections`)}
-            className='Foundation-selector__button'>
+            className='Foundation-selector__button'
+            style={tab!==`collections` ? {borderColor:'transparent'} : {}}>
                 Local Collections
                 </span>
         </div>
