@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Foundation.scss";
 import { DecoratedHeader } from "../DecoratedHeader/DecoratedHeader";
-import { Paginate } from "./modules/Paginate";
 
 import foundations from "./foundations.json";
 import organisations from "./organisations.json";
@@ -10,10 +9,6 @@ import { TabPrint } from "./modules/TabPrint";
 
 export const Foundation = () => {
   const [tab, setTab] = useState(foundations);
-
-  const [items, setItems] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
 
   const handleClick = (name) => {
     setTab(name);
@@ -50,7 +45,6 @@ export const Foundation = () => {
         check their activities, who they help and what they need.
       </p>
       <TabPrint tab={tab} />
-      <Paginate tab={tab} itemsPerPage="3" />
     </div>
   );
 };
