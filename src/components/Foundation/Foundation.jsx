@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import "./Foundation.scss";
 import { DecoratedHeader } from "../DecoratedHeader/DecoratedHeader";
-import { Paginate } from "./Paginate";
+import { Paginate } from "./modules/Paginate";
+
+import foundations from "./foundations.json";
+import organisations from "./organisations.json";
+import collections from "./collections.json";
+import { TabPrint } from "./modules/TabPrint";
 
 export const Foundation = () => {
-  const [tab, setTab] = useState(`foundations`);
+  const [tab, setTab] = useState(foundations);
+
+  const [items, setItems] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
 
   const handleClick = (name) => {
     setTab(name);
@@ -15,23 +24,23 @@ export const Foundation = () => {
       <DecoratedHeader text2="Who we help?" />
       <div className="Foundation-selector">
         <span
-          onClick={() => handleClick(`foundations`)}
+          onClick={() => handleClick(foundations)}
           className="Foundation-selector__button"
-          style={tab !== `foundations` ? { borderColor: "transparent" } : {}}
+          style={tab !== foundations ? { borderColor: "transparent" } : {}}
         >
           Foundations
         </span>
         <span
-          onClick={() => handleClick(`organisations`)}
+          onClick={() => handleClick(organisations)}
           className="Foundation-selector__button"
-          style={tab !== `organisations` ? { borderColor: "transparent" } : {}}
+          style={tab !== organisations ? { borderColor: "transparent" } : {}}
         >
           Non-Gov Organisations
         </span>
         <span
-          onClick={() => handleClick(`collections`)}
+          onClick={() => handleClick(collections)}
           className="Foundation-selector__button"
-          style={tab !== `collections` ? { borderColor: "transparent" } : {}}
+          style={tab !== collections ? { borderColor: "transparent" } : {}}
         >
           Local Collections
         </span>
@@ -40,6 +49,7 @@ export const Foundation = () => {
         Our database collects all verified Foundations we work with. You may
         check their activities, who they help and what they need.
       </p>
+      <TabPrint tab={tab} />
       <Paginate tab={tab} itemsPerPage="3" />
     </div>
   );

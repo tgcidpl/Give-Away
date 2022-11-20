@@ -1,5 +1,5 @@
 [
-    {"id": 1, "name": "Health Care","goals": "Help for people in difficult socialsituation","items": "clothes, food, home equipment, furniture, toys"},
+    {"id": 1, "name": "Health Care","goals": "Help for people in difficult social situation","items": "clothes, food, home equipment, furniture, toys"},
     {"id": 2, "name": "For Children","goals": "Help for children from poor families","items": "clothes, furniture, toys"},
     {"id": 3, "name": "Without Home","goals": "Help for the homeless","items": "clothes, food, warm blankets" },
     {"id": 4, "name": "Lorem ip1","goals": "Some text for foundation1.","items": "item1, item2, item3" },
