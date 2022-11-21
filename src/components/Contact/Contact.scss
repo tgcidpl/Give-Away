@@ -1,0 +1,22 @@
+.Contact {
+  display: flex;
+  height: 100vh;
+  &-image {
+    width: 55vw;
+    background-image: url(../../assets/Background-Contact-Form.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+  &-form {
+    width: 45vw;
+    &-data {
+      display: flex;
+      &__label {
+        display: block;
+      }
+      &__field {
+      }
+    }
+  }
+}

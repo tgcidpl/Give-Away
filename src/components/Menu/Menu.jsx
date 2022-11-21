@@ -55,7 +55,11 @@ export function Menu() {
           </ScrollLink>
         </li>
         <li>
-          <ScrollLink className="Menu-nav__link" to="" smooth="easeOutQuad">
+          <ScrollLink
+            className="Menu-nav__link"
+            to="Contact"
+            smooth="easeOutQuad"
+          >
             Contact
           </ScrollLink>
         </li>
