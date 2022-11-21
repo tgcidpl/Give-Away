@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import organisations from "../organisations.json";
 import collections from "../collections.json";
 import "./TabPrint.scss";
-import { Paginate } from "./Paginate";
+import { Pagination } from "./Pagination";
 
 export const TabPrint = ({ tab }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [itemsPerPage] = useState(3);
 
   let title = `Foundation`;
   if (tab === organisations) title = `Organisation`;
@@ -15,6 +15,8 @@ export const TabPrint = ({ tab }) => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = tab.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div>
@@ -31,7 +33,12 @@ export const TabPrint = ({ tab }) => {
           </li>
         ))}
       </ul>
-      <Paginate itemsPerPage={itemsPerPage} totalItems={tab.length} />
+      <Pagination
+        itemsPerPage={itemsPerPage}
+        totalItems={tab.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

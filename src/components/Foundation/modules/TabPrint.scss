@@ -1,15 +1,21 @@
+@import "../../../scss/settings/colors.scss";
 @import "../../../scss/settings/fonts.scss";
 
 .TabPrint {
   margin: 0 12rem;
+  :nth-child(3) {
+    border-bottom: 1px solid transparent;
+  }
   &-item {
+    border-bottom: 1px solid $quaternaryColor;
     max-width: 84rem;
     font-size: 1.1rem;
     font-family: $font-alt;
     display: flex;
     justify-content: space-between;
     text-align: left;
-    margin-top: 4rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem 0;
     line-height: 2rem;
     &-info {
       > h3 {

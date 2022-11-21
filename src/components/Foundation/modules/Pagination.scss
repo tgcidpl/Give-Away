@@ -1,0 +1,20 @@
+@import "../../../scss/settings/colors.scss";
+
+.Pagination {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  &-item {
+    margin: 2rem 0;
+  }
+
+  &-link {
+    padding: 0.6rem 0.5rem;
+    border: 1px solid;
+    border-color: $quaternaryColor;
+    &:hover {
+      background-color: $accentColor;
+      cursor: pointer;
+    }
+  }
+}
