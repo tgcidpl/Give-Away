@@ -12,11 +12,24 @@
     width: 45vw;
     &-data {
       display: flex;
-      &__label {
-        display: block;
-      }
-      &__field {
+      flex-direction: column;
+      width: 25vw;
+      margin: 0 auto;
+      &-info {
+        display: flex;
+        justify-content: space-between;
+        &__label {
+          font-weight: 600;
+          text-align: start;
+        }
+        &__field {
+        }
       }
     }
   }
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
 }

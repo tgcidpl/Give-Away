@@ -3,9 +3,9 @@ import { DecoratedHeader } from "../DecoratedHeader/DecoratedHeader";
 import "./Contact.scss";
 
 export const Contact = () => {
-  const { name, setName } = useState(null);
-  const { email, setEmail } = useState(null);
-  const { message, setMessage } = useState(null);
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [message, setMessage] = useState(null);
 
   return (
     <div className="Contact">
@@ -15,39 +15,45 @@ export const Contact = () => {
         <form>
           <fieldset>
             <div className="Contact-form-data">
-              <div>
-                <label className="Contact-form-data__label">
-                  Enter your name
-                </label>
-                <input
-                  onChange={setName}
-                  type="text"
-                  className="Contact-form-data__field name"
-                ></input>
+              <div className="Contact-form-data-info">
+                <div className="labelInput">
+                  <label className="Contact-form-data-info__label">
+                    Enter your name
+                  </label>
+                  <input
+                    onChange={(e) => setName(e.target.value)}
+                    type="text"
+                    className="Contact-form-data-info__field"
+                    value={name}
+                    placeholder="Krzysztof"
+                  ></input>
+                </div>
+                <div className="labelInput">
+                  <label className="Contact-form-data-info__label">
+                    Enter your email
+                  </label>
+                  <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    className="Contact-form-data-info__field email"
+                    value={email}
+                    placeholder="abc@xyz.pl"
+                  ></input>
+                </div>
               </div>
-              <div>
-                <label className="Contact-form-data__label">
-                  Enter your email
-                </label>
-                <input
-                  onChange={setEmail}
-                  type="text"
-                  className="Contact-form-data__field email"
-                ></input>
+              <div className="labelInput">
+                <label className="label">Enter your message</label>
+                <textarea
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="Contact-form-data__text"
+                  value={message}
+                  placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                ></textarea>
               </div>
+              <button type="button" className="Contact-form-data__btn">
+                Send
+              </button>
             </div>
-            <div>
-              <label className="Contact-form-data__label">
-                Enter your message
-              </label>
-              <textarea
-                onChange={setMessage}
-                className="Contact-form__text"
-              ></textarea>
-            </div>
-            <button type="button" className="Contact-form__btn">
-              Send
-            </button>
           </fieldset>
         </form>
         <div className="Contact-form-links">
