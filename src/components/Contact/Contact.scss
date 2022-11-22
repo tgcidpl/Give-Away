@@ -1,3 +1,5 @@
+@import "../../scss/settings/colors.scss";
+
 .Contact {
   display: flex;
   height: 100vh;
@@ -13,16 +15,37 @@
     &-data {
       display: flex;
       flex-direction: column;
-      width: 25vw;
+      width: 30vw;
       margin: 0 auto;
+      line-height: 3rem;
       &-info {
         display: flex;
         justify-content: space-between;
-        &__label {
-          font-weight: 600;
-          text-align: start;
-        }
         &__field {
+          font-size: 1.1rem;
+          border: transparent;
+          border-bottom: 1px solid $quaternaryColor;
+        }
+      }
+      &__text {
+        font-size: 1.1rem;
+        border: transparent;
+        border-bottom: 1px solid $quaternaryColor;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      &__btn {
+        width: 8rem;
+        font-size: 1.1rem;
+        background-color: transparent;
+        margin-top: 2rem;
+        padding: 0.6rem 0.5rem;
+        border: 1px solid;
+        border-color: $quaternaryColor;
+        &:hover {
+          background-color: $accentColor;
+          cursor: pointer;
         }
       }
     }
@@ -32,4 +55,10 @@
 .labelInput {
   display: flex;
   flex-direction: column;
+}
+
+.label {
+  margin-top: 2rem;
+  font-weight: 600;
+  text-align: start;
 }

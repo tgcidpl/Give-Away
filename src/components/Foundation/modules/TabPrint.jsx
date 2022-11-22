@@ -18,6 +18,10 @@ export const TabPrint = ({ tab }) => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [tab]);
+
   return (
     <div>
       <ul className="TabPrint">

@@ -19,17 +19,12 @@ export const Pagination = ({
             <span
               onClick={() => paginate(number)}
               className="Pagination-link"
-              style={
-                number !== currentPage ? { borderColor: "transparent" } : {}
-              }
-              // below code for hiding pagination if less than 3 items on list
-              // however does not work without page reset when changing tabs
-              // style={{
-              //   ...(number !== currentPage
-              //     ? { borderColor: "transparent" }
-              //     : {}),
-              //   ...(totalItems <= 3 ? { display: "none" } : {}),
-              // }}
+              style={{
+                ...(number !== currentPage
+                  ? { borderColor: "transparent" }
+                  : {}),
+                ...(totalItems <= 3 ? { display: "none" } : {}),
+              }}
             >
               {number}
             </span>
