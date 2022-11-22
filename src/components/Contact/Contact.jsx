@@ -55,10 +55,6 @@ export const Contact = () => {
             </div>
           </fieldset>
         </form>
-        <div className="Contact-form-links">
-          <a href="https:\\facebook.com">Facebook</a>
-          <a href="https:\\instagram.com">Instagram</a>
-        </div>
       </div>
     </div>
   );

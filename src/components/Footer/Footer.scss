@@ -1,0 +1,18 @@
+.Footer {
+  &-links {
+    &__facebook {
+      height: 20px;
+      width: 20px;
+      background-image: url(../../assets/Facebook.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__instagram {
+      height: 20px;
+      width: 20px;
+      background-image: url(../../assets/Instagram.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
