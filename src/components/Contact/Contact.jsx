@@ -10,14 +10,39 @@ export const Contact = () => {
   const [emailError, setEmailError] = useState(false);
   const [messageError, setMessageError] = useState(false);
 
+  const submitForm = () => {
+    console.log(`submitted`);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    name.includes(" ") || name.length === 0
-      ? setNameError(true)
-      : setNameError(false);
-    !email.includes("@") ? setEmailError(true) : setEmailError(false);
-    message.length < 120 ? setMessageError(true) : setError(false);
-    console.log(name, email, message);
+
+    let noErrors = true;
+
+    if (name.includes(" ") || name.length === 0) {
+      setNameError(true);
+      noErrors = false;
+    } else {
+      setNameError(false);
+    }
+
+    if (!email.includes("@")) {
+      setEmailError(true);
+      noErrors = false;
+    } else {
+      setEmailError(false);
+    }
+    if (message.length < 120) {
+      setMessageError(true);
+      noErrors = false;
+    } else {
+      setMessageError(false);
+    }
+
+    noErrors
+      ? submitForm()
+      : () => {
+          return;
+        };
   };
 
   return (
