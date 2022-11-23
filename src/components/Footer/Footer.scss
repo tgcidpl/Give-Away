@@ -1,18 +1,31 @@
+@mixin icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .Footer {
+  transform: translate(0, -150%);
+  display: flex;
+  justify-content: space-between;
+  &-copyright {
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
   &-links {
+    display: flex;
+    gap: 1rem;
+    margin-right: 7rem;
+    transform: translate(0, -50%);
     &__facebook {
-      height: 20px;
-      width: 20px;
+      @include icon;
       background-image: url(../../assets/Facebook.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
     }
     &__instagram {
-      height: 20px;
-      width: 20px;
+      @include icon;
       background-image: url(../../assets/Instagram.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
     }
   }
 }

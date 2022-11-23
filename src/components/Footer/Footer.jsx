@@ -6,12 +6,8 @@ export const Footer = () => {
     <div className="Footer">
       <span className="Footer-copyright">Copyright by Coders Lab</span>
       <div className="Footer-links">
-        <a className="Footer-links__facebook" href="https:\\facebook.com">
-          Facebook
-        </a>
-        <a className="Footer-links__instagram" href="https:\\instagram.com">
-          Instagram
-        </a>
+        <a className="Footer-links__facebook" href="https:\\facebook.com"></a>
+        <a className="Footer-links__instagram" href="https:\\instagram.com"></a>
       </div>
     </div>
   );
