@@ -17,7 +17,7 @@
       flex-direction: column;
       width: 30vw;
       margin: 0 auto;
-      line-height: 3rem;
+      line-height: 2rem;
       &-info {
         display: flex;
         justify-content: space-between;
@@ -59,7 +59,17 @@
 }
 
 .label {
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-weight: 600;
   text-align: start;
+}
+
+.errorLabel {
+  margin-right: auto;
+  color: red;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }

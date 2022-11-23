@@ -13,6 +13,7 @@ export const Contact = () => {
   const submitForm = () => {
     console.log(`submitted`);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -63,7 +64,9 @@ export const Contact = () => {
                     value={name}
                     placeholder="Krzysztof"
                   ></input>
-                  {nameError ? <label>Incorrect name</label> : ""}
+                  <label className={nameError ? "errorLabel" : "hidden"}>
+                    Incorrect name
+                  </label>
                 </div>
                 <div className="labelInput">
                   <label className="label">Enter your email</label>
@@ -74,7 +77,10 @@ export const Contact = () => {
                     value={email}
                     placeholder="abc@xyz.pl"
                   ></input>
-                  {emailError ? <label>Incorrect email</label> : ""}
+
+                  <label className={emailError ? "errorLabel" : "hidden"}>
+                    Incorrect email
+                  </label>
                 </div>
               </div>
               <div className="labelInput">
@@ -86,11 +92,9 @@ export const Contact = () => {
                   rows={4}
                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 ></textarea>
-                {messageError ? (
-                  <label>Message should be longer than 120 signs</label>
-                ) : (
-                  ""
-                )}
+                <label className={messageError ? "errorLabel" : "hidden"}>
+                  Message should be longer than 120 signs
+                </label>
               </div>
               <input
                 onClick={(e) => handleSubmit(e)}
