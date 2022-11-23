@@ -9,9 +9,20 @@ export const Contact = () => {
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [messageError, setMessageError] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const data = {
+    name: name,
+    email: email,
+    message: message,
+  };
 
   const submitForm = () => {
+    // CONTINUE BELOW
+    async function sendData() {}
+    setSubmitSuccess(true);
     console.log(`submitted`);
+    console.log(JSON.stringify(data));
   };
 
   const handleSubmit = (e) => {
@@ -38,7 +49,6 @@ export const Contact = () => {
     } else {
       setMessageError(false);
     }
-
     noErrors
       ? submitForm()
       : () => {
@@ -51,6 +61,9 @@ export const Contact = () => {
       <div className="Contact-image"></div>
       <div className="Contact-form">
         <DecoratedHeader text2="Contact us" />
+        <label className={submitSuccess ? "success" : "hidden"}>
+          Message succesfully sent! <br></br>We will contact you soon.
+        </label>
         <form>
           <fieldset>
             <div className="Contact-form-data">
@@ -61,10 +74,13 @@ export const Contact = () => {
                     onChange={(e) => setName(e.target.value)}
                     type="text"
                     className="Contact-form-data-info__field"
+                    style={{
+                      borderColor: nameError ? "red" : "",
+                    }}
                     value={name}
                     placeholder="Krzysztof"
                   ></input>
-                  <label className={nameError ? "errorLabel" : "hidden"}>
+                  <label className={nameError ? "error" : "hidden"}>
                     Incorrect name
                   </label>
                 </div>
@@ -74,11 +90,13 @@ export const Contact = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     className="Contact-form-data-info__field"
+                    style={{
+                      borderColor: emailError ? "red" : "",
+                    }}
                     value={email}
                     placeholder="abc@xyz.pl"
                   ></input>
-
-                  <label className={emailError ? "errorLabel" : "hidden"}>
+                  <label className={emailError ? "error" : "hidden"}>
                     Incorrect email
                   </label>
                 </div>
@@ -88,11 +106,14 @@ export const Contact = () => {
                 <textarea
                   onChange={(e) => setMessage(e.target.value)}
                   className="Contact-form-data__text"
+                  style={{
+                    borderColor: messageError ? "red" : "",
+                  }}
                   value={message}
                   rows={4}
                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 ></textarea>
-                <label className={messageError ? "errorLabel" : "hidden"}>
+                <label className={messageError ? "error" : "hidden"}>
                   Message should be longer than 120 signs
                 </label>
               </div>

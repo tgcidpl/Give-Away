@@ -68,8 +68,14 @@
   margin-right: auto;
   color: red;
   opacity: 1;
+  font-weight: 600;
 }
-
+.success {
+  margin-right: auto;
+  color: green;
+  opacity: 1;
+  font-weight: 600;
+}
 .hidden {
   opacity: 0;
 }
