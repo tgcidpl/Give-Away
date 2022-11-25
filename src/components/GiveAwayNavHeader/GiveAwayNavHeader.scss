@@ -1,0 +1,57 @@
+.GiveAwayNavHeader {
+  max-width: 1758px;
+  height: 100vh;
+  display: flex;
+  &-banner {
+    width: 50%;
+    max-height: 100vh;
+    background-image: url(../../assets/Form-Hero-Image.jpg);
+    background-size: cover;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+  }
+  &-header {
+    width: 45%;
+    height: 100vh;
+    &-steps {
+      margin-top: 8rem;
+      margin-right: 10rem;
+      &__text {
+        font-size: 2rem;
+      }
+      &-box {
+        margin: 2rem auto;
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 60vw;
+        gap: 2rem;
+        &-step {
+          padding: 2rem;
+          width: 6rem;
+          > h3 {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+          }
+          > p {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 8rem;
+              height: 8rem;
+              border: 1px solid;
+              rotate: 45deg;
+              top: 0;
+              left: 0;
+              transform: translate(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
