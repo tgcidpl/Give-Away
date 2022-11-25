@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { DecoratedHeader } from "../DecoratedHeader/DecoratedHeader";
 import "./Contact.scss";
 
@@ -11,19 +12,30 @@ export const Contact = () => {
   const [messageError, setMessageError] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const data = {
-    name: name,
-    email: email,
-    message: message,
-  };
-
-  const submitForm = () => {
-    // CONTINUE BELOW
-    async function sendData() {}
-    setSubmitSuccess(true);
-    console.log(`submitted`);
-    console.log(JSON.stringify(data));
-  };
+  async function submitForm() {
+    try {
+      await axios.post(
+        "https://fer-api.coderslab.pl/v1/portfolio/contact",
+        {
+          name: name,
+          email: email,
+          message: message,
+        },
+        {
+          "Content-Type": "application/json",
+        }
+      );
+      setSubmitSuccess(true);
+      console.log(`submitted`);
+      console.log(submitSuccess);
+    } catch (error) {
+      console.log(error);
+      setSubmitSuccess(false);
+      alert(
+        "Message not sent due to error, please check if your email is correct and try again."
+      );
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
