@@ -1,0 +1,30 @@
+@import "../../scss/settings/colors.scss";
+
+.Form-container {
+  height: 80vh;
+  background-image: url(../../assets/Background-Form.jpg);
+  background-size: cover;
+}
+
+.NavBtn {
+  display: flex;
+  font-size: 2.25rem;
+  border: 1px solid $textColor;
+  width: 10rem;
+  height: 5rem;
+  margin: 1.375rem;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  line-height: 3rem;
+  padding: 0 4rem;
+  &:hover {
+    background-color: $accentColor;
+    cursor: pointer;
+  }
+}
+
+.Form-nav {
+  display: flex;
+  margin-left: 8rem;
+}

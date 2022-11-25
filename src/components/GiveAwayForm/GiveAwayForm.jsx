@@ -25,13 +25,26 @@ export const GiveAwayForm = () => {
     notes: "",
   });
 
+  const NavButton = ({ text, step }) => {
+    return (
+      <div onClick={() => setStep(step)} className="NavBtn">
+        {text}
+      </div>
+    );
+  };
+
   if (step === 1) {
     return (
       <>
         <InfoBar
           text={`Fill in details of unwanted things, so we know who should receive them.`}
         />
-        <Step1 />
+        <div className="Form-container">
+          <Step1 />
+          <div className="Form-nav">
+            <NavButton text={"Next"} step={2} />
+          </div>
+        </div>
       </>
     );
   }
@@ -41,7 +54,13 @@ export const GiveAwayForm = () => {
         <InfoBar
           text={`Pack all things in 60l bags. Proper packing instruction can be found HERE.`}
         />
-        <Step2 />
+        <div className="Form-container">
+          <Step2 />
+          <div className="Form-nav">
+            <NavButton text={"Back"} step={1} />
+            <NavButton text={"Next"} step={3} />
+          </div>
+        </div>
       </>
     );
   }
@@ -51,7 +70,13 @@ export const GiveAwayForm = () => {
         <InfoBar
           text={`You may pick an organisation from the list if you know whom you would like to help. You may also filter organisations by location or aim.`}
         />
-        <Step3 />
+        <div className="Form-container">
+          <Step3 />
+          <div className="Form-nav">
+            <NavButton text={"Back"} step={2} />
+            <NavButton text={"Next"} step={4} />
+          </div>
+        </div>
       </>
     );
   }
@@ -59,21 +84,35 @@ export const GiveAwayForm = () => {
     return (
       <>
         <InfoBar text={`Enter your address and collection time.`} />
-        <Step4 />
+        <div className="Form-container">
+          <Step4 />
+          <div className="Form-nav">
+            <NavButton text={"Back"} step={3} />
+            <NavButton text={"Next"} step={5} />
+          </div>
+        </div>
       </>
     );
   }
   if (step === 5) {
     return (
       <>
-        <Step5 />
+        <div className="Form-container">
+          <Step5 />
+          <div className="Form-nav">
+            <NavButton text={"Back"} step={4} />
+            <NavButton text={"Confirm"} step={6} />
+          </div>
+        </div>
       </>
     );
   }
   if (step === 6) {
     return (
       <>
-        <Step6 />
+        <div className="Form-container">
+          <Step6 />
+        </div>
       </>
     );
   } else {

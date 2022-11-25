@@ -11,8 +11,8 @@ export function Cta() {
         text2={`Give away unwanted things with confidence`}
       />
       <div className="Cta-btns">
-        <LargeBtn text={`GIVE AWAY`} link={`/login`} />
-        <LargeBtn text={`ORGANISE COLLECTION`} link={`/login`} />
+        <LargeBtn text={`GIVE AWAY`} link={`/give-away`} />
+        <LargeBtn text={`ORGANISE COLLECTION`} link={`/give-away`} />
       </div>
     </div>
   );
