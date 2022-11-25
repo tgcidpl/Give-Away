@@ -10,6 +10,21 @@ import { Step6 } from "./modules/Step6";
 
 export const GiveAwayForm = () => {
   const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState({
+    things: "",
+    bags: "",
+    location: "",
+    who: "",
+    organisation: "",
+    street: "",
+    city: "",
+    postcode: "",
+    phone: "",
+    date: "",
+    time: "",
+    notes: "",
+  });
+
   if (step === 1) {
     return (
       <>
