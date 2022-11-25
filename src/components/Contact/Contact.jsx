@@ -26,10 +26,7 @@ export const Contact = () => {
         }
       );
       setSubmitSuccess(true);
-      console.log(`submitted`);
-      console.log(submitSuccess);
     } catch (error) {
-      console.log(error);
       setSubmitSuccess(false);
       alert(
         "Message not sent due to error, please check if your email is correct and try again."
@@ -44,6 +41,7 @@ export const Contact = () => {
 
     if (name.includes(" ") || name.length === 0) {
       setNameError(true);
+      setSubmitSuccess(false);
       noErrors = false;
     } else {
       setNameError(false);
@@ -51,12 +49,14 @@ export const Contact = () => {
 
     if (!email.includes("@")) {
       setEmailError(true);
+      setSubmitSuccess(false);
       noErrors = false;
     } else {
       setEmailError(false);
     }
     if (message.length < 120) {
       setMessageError(true);
+      setSubmitSuccess(false);
       noErrors = false;
     } else {
       setMessageError(false);

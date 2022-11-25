@@ -1,4 +1,12 @@
 @import "../../scss/settings/colors.scss";
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .Contact {
   display: flex;
@@ -67,14 +75,14 @@
 .error {
   margin-right: auto;
   color: red;
-  opacity: 1;
   font-weight: 600;
+  animation: fadeInOpacity 1s;
 }
 .success {
   margin-right: auto;
   color: green;
-  opacity: 1;
   font-weight: 600;
+  animation: fadeInOpacity 1s;
 }
 .hidden {
   opacity: 0;
