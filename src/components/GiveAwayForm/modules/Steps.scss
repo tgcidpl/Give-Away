@@ -3,13 +3,13 @@
 .Step-container {
   text-align: left;
   padding: 2rem;
+  height: 34rem;
 }
 
 .Step-number {
   margin-left: 8rem;
   font-size: 1.5rem;
 }
-
 .Step-body {
   &__header {
     margin-top: 4rem;
@@ -18,6 +18,10 @@
     font-weight: 700;
     margin-bottom: 2rem;
   }
+}
+
+.Step1-body {
+  font-size: 1.5rem;
   &-checklist {
     display: flex;
     flex-direction: column;
@@ -38,9 +42,23 @@
           background-color: $accentColor;
         }
       }
-      &__label {
-        font-size: 1.5rem;
-      }
+    }
+  }
+}
+
+.Step2-body {
+  display: flex;
+  font-size: 1.5rem;
+  &__label {
+    margin: 1rem 1rem 1rem 8rem;
+  }
+  &-select {
+    text-align: center;
+    width: 16rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    &:hover {
+      background-color: $accentColor;
     }
   }
 }

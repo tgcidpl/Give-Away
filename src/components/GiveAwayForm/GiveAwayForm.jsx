@@ -37,7 +37,9 @@ export const GiveAwayForm = () => {
           text={`Choose type of unwanted things, so we know who should receive them.`}
         />
         <div className="Form-container">
-          <Step1 onChange={(value) => setFormData({ type: value })} />
+          <Step1
+            onChange={(value) => setFormData({ ...formData, type: value })}
+          />
           <div className="Form-nav">
             <NavButton text={"Next"} step={2} />
           </div>
@@ -52,7 +54,9 @@ export const GiveAwayForm = () => {
           text={`Pack all things in 60l bags. Proper packing instruction can be found HERE.`}
         />
         <div className="Form-container">
-          <Step2 />
+          <Step2
+            onChange={(value) => setFormData({ ...formData, bags: value })}
+          />
           <div className="Form-nav">
             <NavButton text={"Back"} step={1} />
             <NavButton text={"Next"} step={3} />

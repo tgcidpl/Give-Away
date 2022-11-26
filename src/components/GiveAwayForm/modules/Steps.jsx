@@ -6,60 +6,60 @@ export const Step1 = (props) => {
   return (
     <div className="Step-container">
       <span className="Step-number">Step 1/4</span>
-      <div className="Step-body">
-        <h2 className="Step-body__header">Select things to give away:</h2>
+      <h2 className="Step-body__header">Select things to give away:</h2>
+      <div className="Step1-body">
         <div
-          className="Step-body-checklist"
+          className="Step1-body-checklist"
           onChange={(event) => props.onChange(event.target.value)}
         >
-          <div className="Step-body-checklist-item">
+          <div className="Step1-body-checklist-item">
             <input
-              className="Step-body-checklist-item__checkmark"
+              className="Step1-body-checklist-item__checkmark"
               type="radio"
               value="clothes in good condition"
               name="type"
             />
-            <label className="Step-body-checklist-item__label">
+            <label className="Step1-body-checklist-item__label">
               clothes in good condition
             </label>
           </div>
-          <div className="Step-body-checklist-item">
+          <div className="Step1-body-checklist-item">
             <input
-              className="Step-body-checklist-item__checkmark"
+              className="Step1-body-checklist-item__checkmark"
               type="radio"
               value="clothes to be thrown away"
               name="type"
             />
-            <label className="Step-body-checklist-item__label">
+            <label className="Step1-body-checklist-item__label">
               clothes to be thrown away
             </label>
           </div>
-          <div className="Step-body-checklist-item">
+          <div className="Step1-body-checklist-item">
             <input
-              className="Step-body-checklist-item__checkmark"
+              className="Step1-body-checklist-item__checkmark"
               type="radio"
               value="toys"
               name="type"
             />
-            <label className="Step-body-checklist-item__label">toys</label>
+            <label className="Step1-body-checklist-item__label">toys</label>
           </div>
-          <div className="Step-body-checklist-item">
+          <div className="Step1-body-checklist-item">
             <input
-              className="Step-body-checklist-item__checkmark"
+              className="Step1-body-checklist-item__checkmark"
               type="radio"
               value="books"
               name="type"
             />
-            <label className="Step-body-checklist-item__label">books</label>
+            <label className="Step1-body-checklist-item__label">books</label>
           </div>
-          <div className="Step-body-checklist-item">
+          <div className="Step1-body-checklist-item">
             <input
-              className="Step-body-checklist-item__checkmark"
+              className="Step1-body-checklist-item__checkmark"
               type="radio"
               value="other"
               name="type"
             />
-            <label className="Step-body-checklist-item__label">other</label>
+            <label className="Step1-body-checklist-item__label">other</label>
           </div>
         </div>
       </div>
@@ -67,13 +67,27 @@ export const Step1 = (props) => {
   );
 };
 
-export const Step2 = () => {
+export const Step2 = (props) => {
   return (
     <div className="Step-container">
       <span className="Step-number">Step 2/4</span>
       <h2 className="Step-body__header">
-        Select number of 60l bags with packed things:
+        Select the number of 60l bags with packed things:
       </h2>
+      <div className="Step2-body">
+        <label className="Step2-body__label">Number of 60l bags:</label>
+        <select
+          className="Step2-body-select"
+          onChange={(event) => props.onChange(event.target.value)}
+        >
+          <option value="0">- select -</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
     </div>
   );
 };
