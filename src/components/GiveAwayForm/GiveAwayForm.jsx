@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import "./GiveAwayForm.scss";
 import { InfoBar } from "./modules/InfoBar";
-import { Step1 } from "./modules/Step1";
-import { Step2 } from "./modules/Step2";
-import { Step3 } from "./modules/Step3";
-import { Step4 } from "./modules/Step4";
-import { Step5 } from "./modules/Step5";
-import { Step6 } from "./modules/Step6";
+import { Step1, Step2, Step3, Step4, Step5, Step6 } from "./modules/Steps";
 
 export const GiveAwayForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    things: "",
+    type: "",
     bags: "",
     location: "",
     who: "",
@@ -25,6 +20,8 @@ export const GiveAwayForm = () => {
     notes: "",
   });
 
+  console.log(formData);
+
   const NavButton = ({ text, step }) => {
     return (
       <div onClick={() => setStep(step)} className="NavBtn">
@@ -37,10 +34,10 @@ export const GiveAwayForm = () => {
     return (
       <>
         <InfoBar
-          text={`Fill in details of unwanted things, so we know who should receive them.`}
+          text={`Choose type of unwanted things, so we know who should receive them.`}
         />
         <div className="Form-container">
-          <Step1 />
+          <Step1 onChange={(value) => setFormData({ type: value })} />
           <div className="Form-nav">
             <NavButton text={"Next"} step={2} />
           </div>
