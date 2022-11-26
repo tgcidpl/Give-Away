@@ -1,7 +1,8 @@
 @import "../../scss/settings/colors.scss";
 
 .Form-container {
-  height: 80vh;
+  height: auto;
+  min-height: 80vh;
   background-image: url(../../assets/Background-Form.jpg);
   background-size: cover;
 }

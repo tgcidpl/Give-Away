@@ -1,0 +1,46 @@
+@import "../../../scss/settings/colors.scss";
+
+.Step-container {
+  text-align: left;
+  padding: 2rem;
+}
+
+.Step-number {
+  margin-left: 8rem;
+  font-size: 1.5rem;
+}
+
+.Step-body {
+  &__header {
+    margin-top: 4rem;
+    margin-left: 8rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  &-checklist {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      display: flex;
+      align-items: center;
+      &__checkmark {
+        margin: 1rem 1rem 1rem 8rem;
+        appearance: none;
+        cursor: pointer;
+        height: 2rem;
+        width: 2rem;
+        border: 1px solid;
+        &:hover {
+          background-color: $accentColor;
+        }
+        &:checked {
+          background-color: $accentColor;
+        }
+      }
+      &__label {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
