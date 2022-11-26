@@ -92,11 +92,33 @@ export const Step2 = (props) => {
   );
 };
 
-export const Step3 = () => {
+export const Step3 = (props) => {
   return (
     <div className="Step-container">
       <span className="Step-number">Step 3/4</span>
       <h2 className="Step-body__header">Location:</h2>
+      <select
+        className="Step3-body-select"
+        onChange={(event) => props.onChange(event.target.value)}
+      >
+        <option value="0">- select -</option>
+        <option value="Poznań">Poznań</option>
+        <option value="Warszawa">Warszawa</option>
+        <option value="Kraków">Kraków</option>
+        <option value="Wrocław">Wrocław</option>
+        <option value="Katowice">Katowice</option>
+      </select>
+
+      {/* CONTINUE BELOW */}
+      <h3 className="Step-body__minorHeader">Who would you like to help?</h3>
+      <div className="Step3-body-checkboxes">
+        <input
+          className="Step3-body-checkboxes__item"
+          type="checkbox"
+          value="children"
+          name="type"
+        ></input>
+      </div>
     </div>
   );
 };

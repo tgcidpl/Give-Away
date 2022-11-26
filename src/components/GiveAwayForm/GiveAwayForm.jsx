@@ -9,7 +9,7 @@ export const GiveAwayForm = () => {
     type: "",
     bags: "",
     location: "",
-    who: "",
+    helpGroups: "",
     organisation: "",
     street: "",
     city: "",
@@ -72,7 +72,9 @@ export const GiveAwayForm = () => {
           text={`You may pick an organisation from the list if you know whom you would like to help. You may also filter organisations by location or aim.`}
         />
         <div className="Form-container">
-          <Step3 />
+          <Step3
+            onChange={(value) => setFormData({ ...formData, location: value })}
+          />
           <div className="Form-nav">
             <NavButton text={"Back"} step={2} />
             <NavButton text={"Next"} step={4} />
