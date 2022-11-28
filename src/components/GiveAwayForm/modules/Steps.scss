@@ -18,6 +18,12 @@
     font-weight: 700;
     margin-bottom: 2rem;
   }
+  &__minorHeader {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-left: 8rem;
+    font-weight: 700;
+  }
 }
 
 .Step1-body {
@@ -61,4 +67,57 @@
       background-color: $accentColor;
     }
   }
+}
+
+.Step3-body {
+  &-select {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin-left: 8rem;
+    text-align: center;
+    width: 16rem;
+    background-color: transparent;
+    &:hover {
+      background-color: $accentColor;
+    }
+  }
+  &-checkboxes {
+    margin-left: 8rem;
+    max-width: 34rem;
+    &__item {
+      margin: 1rem 1rem 0 0;
+      appearance: none;
+      cursor: pointer;
+      border: 1px solid;
+      &:hover {
+        background-color: $accentColor;
+      }
+      &:checked {
+        background-color: $accentColor;
+      }
+      &:after {
+        content: "";
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.checkboxChildren:after {
+  content: "children";
+}
+.checkboxSingleMothers:after {
+  content: "single mothers";
+}
+.checkboxHomeless:after {
+  content: "homeless";
+}
+.checkboxDisabled:after {
+  content: "disabled";
+}
+.checkboxElderly:after {
+  content: "elderly";
 }

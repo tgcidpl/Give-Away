@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { DecoratedHeader } from "../../DecoratedHeader/DecoratedHeader";
 import "./Steps.scss";
 
@@ -93,6 +93,17 @@ export const Step2 = (props) => {
 };
 
 export const Step3 = (props) => {
+  const [who, setWho] = useState([]);
+
+  useEffect(() => {
+    props.selectWhoToHelp(who);
+  }, [who]);
+
+  const handleCheck = (value) => {
+    who.includes(value)
+      ? setWho(who.filter((word) => word !== value))
+      : setWho([...who, value]);
+  };
   return (
     <div className="Step-container">
       <span className="Step-number">Step 3/4</span>
@@ -109,14 +120,42 @@ export const Step3 = (props) => {
         <option value="Katowice">Katowice</option>
       </select>
 
-      {/* CONTINUE BELOW */}
       <h3 className="Step-body__minorHeader">Who would you like to help?</h3>
       <div className="Step3-body-checkboxes">
         <input
-          className="Step3-body-checkboxes__item"
+          className="Step3-body-checkboxes__item checkboxChildren"
           type="checkbox"
           value="children"
           name="type"
+          onClick={(event) => handleCheck(event.target.value)}
+        ></input>
+        <input
+          className="Step3-body-checkboxes__item checkboxSingleMothers"
+          type="checkbox"
+          value="single mothers"
+          name="type"
+          onClick={(event) => handleCheck(event.target.value)}
+        ></input>
+        <input
+          className="Step3-body-checkboxes__item checkboxHomeless"
+          type="checkbox"
+          value="homeless"
+          name="type"
+          onClick={(event) => handleCheck(event.target.value)}
+        ></input>
+        <input
+          className="Step3-body-checkboxes__item checkboxDisabled"
+          type="checkbox"
+          value="disabled"
+          name="type"
+          onClick={(event) => handleCheck(event.target.value)}
+        ></input>
+        <input
+          className="Step3-body-checkboxes__item checkboxElderly"
+          type="checkbox"
+          value="elderly"
+          name="type"
+          onClick={(event) => handleCheck(event.target.value)}
         ></input>
       </div>
     </div>
