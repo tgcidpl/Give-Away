@@ -94,16 +94,22 @@ export const Step2 = (props) => {
 
 export const Step3 = (props) => {
   const [who, setWho] = useState([]);
+  const [organisation, setOrganisation] = useState([]);
 
   useEffect(() => {
     props.selectWhoToHelp(who);
   }, [who]);
+
+  useEffect(() => {
+    props.selectOrganisation(organisation);
+  }, [organisation]);
 
   const handleCheck = (value) => {
     who.includes(value)
       ? setWho(who.filter((word) => word !== value))
       : setWho([...who, value]);
   };
+
   return (
     <div className="Step-container">
       <span className="Step-number">Step 3/4</span>
@@ -158,6 +164,15 @@ export const Step3 = (props) => {
           onClick={(event) => handleCheck(event.target.value)}
         ></input>
       </div>
+      <h3 className="Step-body__minorHeader">
+        Enter chosen organisation's name (optional)
+        <input
+          className="Step3-body__input"
+          type="text"
+          name="organisation"
+          onChange={(event) => setOrganisation(event.target.value)}
+        ></input>
+      </h3>
     </div>
   );
 };

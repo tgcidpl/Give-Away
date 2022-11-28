@@ -72,7 +72,6 @@ export const GiveAwayForm = () => {
           text={`You may pick an organisation from the list if you know whom you would like to help. You may also filter organisations by location or aim.`}
         />
         <div className="Form-container">
-          <div onClick={() => console.log(formData)}>whotohelp</div>
           <Step3
             selectWhoToHelp={(value) =>
               setFormData({ ...formData, helpGroups: value })
@@ -82,6 +81,9 @@ export const GiveAwayForm = () => {
                 ...formData,
                 location: value,
               })
+            }
+            selectOrganisation={(value) =>
+              setFormData({ ...formData, organisation: value })
             }
           />
           <div className="Form-nav">

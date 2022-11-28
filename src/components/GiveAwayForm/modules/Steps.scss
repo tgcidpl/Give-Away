@@ -121,3 +121,12 @@
 .checkboxElderly:after {
   content: "elderly";
 }
+
+.Step3-body {
+  &__input {
+    display: block;
+    background-color: transparent;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+  }
+}
