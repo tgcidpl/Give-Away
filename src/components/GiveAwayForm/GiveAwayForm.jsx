@@ -88,7 +88,9 @@ export const GiveAwayForm = () => {
           />
           <div className="Form-nav">
             <NavButton text={"Back"} step={2} />
-            <NavButton text={"Next"} step={4} />
+            {formData.helpGroups.length >= 1 && (
+              <NavButton text={"Next"} step={4} />
+            )}
           </div>
         </div>
       </>
