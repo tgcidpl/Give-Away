@@ -114,7 +114,7 @@ export const GiveAwayForm = () => {
     return (
       <>
         <div className="Form-container">
-          <Step5 />
+          <Step5 formData={formData} />
           <div className="Form-nav">
             <NavButton text={"Back"} step={4} />
             <NavButton text={"Confirm"} step={6} />

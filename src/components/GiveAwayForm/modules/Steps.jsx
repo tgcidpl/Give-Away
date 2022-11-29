@@ -186,7 +186,7 @@ export const Step4 = () => {
       </h2>
       <div className="Step4-body">
         <div className="Step4-body-section">
-          <h3 className="Step-body__minorHeader">Address for collection</h3>
+          <h3 className="Step-body__minorHeader">Address for collection:</h3>
 
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Street</label>
@@ -222,7 +222,7 @@ export const Step4 = () => {
           </div>
         </div>
         <div className="Step4-body-section">
-          <h3 className="Step-body__minorHeader">Date of collection</h3>
+          <h3 className="Step-body__minorHeader">Date of collection:</h3>
 
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Day</label>
@@ -255,10 +255,54 @@ export const Step4 = () => {
   );
 };
 
-export const Step5 = () => {
+export const Step5 = (props) => {
+  console.log(props.formData.street);
   return (
     <div className="Step-container">
       <h2 className="Step-body__header">Summary of your donation</h2>
+      <h3 className="Step-body__minorHeader">You're donating:</h3>
+      <p>bags , , </p>
+      <p>location:</p>
+      <div className="Step4-body">
+        <div className="Step4-body-section">
+          <h3 className="Step-body__minorHeader">Address for collection:</h3>
+
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Street</label>
+            <span>gfhhgf</span>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">City</label>
+            <span>blabla</span>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Postcode</label>
+            <span>blabla</span>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Phone</label>
+            <span>blabla</span>
+          </div>
+        </div>
+        <div className="Step4-body-section">
+          <h3 className="Step-body__minorHeader">Date of collection:</h3>
+
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Day</label>
+            <span>blabla</span>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Time</label>
+            <span>blabla</span>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label notes-label">
+              Delivery <br></br> notes
+            </label>
+            <p>fasfas</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
