@@ -3,7 +3,7 @@
 .Step-container {
   text-align: left;
   padding: 2rem;
-  height: 34rem;
+  height: 76vh;
 }
 
 .Step-number {
@@ -23,6 +23,10 @@
     margin-top: 3rem;
     margin-left: 8rem;
     font-weight: 700;
+  }
+  &__label {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 1rem 8rem;
   }
 }
 
@@ -129,4 +133,33 @@
     margin: 1rem 0 2rem 0;
     font-size: 1.5rem;
   }
+}
+
+.Step4-body {
+  display: flex;
+  &-section {
+    > h3 {
+      margin-bottom: 1rem;
+    }
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__input {
+        background-color: transparent;
+        font-size: 1.5rem;
+        width: 14rem;
+        height: 2rem;
+        border: 1px solid;
+      }
+    }
+  }
+}
+
+.notes-label {
+  align-self: flex-start;
+}
+.notes-text {
+  height: 6rem;
+  margin-top: 0.5rem;
 }

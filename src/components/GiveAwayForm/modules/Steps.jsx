@@ -184,6 +184,73 @@ export const Step4 = () => {
       <h2 className="Step-body__header">
         Enter your address and time of courier collection
       </h2>
+      <div className="Step4-body">
+        <div className="Step4-body-section">
+          <h3 className="Step-body__minorHeader">Address for collection</h3>
+
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Street</label>
+            <input
+              className="Step4-body-section-item__input"
+              type="text"
+              name="street"
+            ></input>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">City</label>
+            <input
+              className="Step4-body-section-item__input"
+              type="text"
+              name="city"
+            ></input>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Postcode</label>
+            <input
+              className="Step4-body-section-item__input"
+              type="text"
+              name="postcode"
+            ></input>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Phone</label>
+            <input
+              className="Step4-body-section-item__input"
+              type="text"
+              name="phone"
+            ></input>
+          </div>
+        </div>
+        <div className="Step4-body-section">
+          <h3 className="Step-body__minorHeader">Date of collection</h3>
+
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Day</label>
+            <input
+              className="Step4-body-section-item__input"
+              type="text"
+              name="day"
+            ></input>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label">Time</label>
+            <input
+              className="Step4-body-section-item__input"
+              type="text"
+              name="time"
+            ></input>
+          </div>
+          <div className="Step4-body-section-item">
+            <label className="Step-body__label notes-label">
+              Delivery <br></br> notes
+            </label>
+            <textarea
+              className="Step4-body-section-item__input notes-text"
+              name="street"
+            ></textarea>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
