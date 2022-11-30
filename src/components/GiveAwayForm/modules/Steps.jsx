@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { DecoratedHeader } from "../../DecoratedHeader/DecoratedHeader";
 import "./Steps.scss";
+import { useStoreState } from "easy-peasy";
 
-export const Step1 = (props) => {
+export const Step1 = () => {
+  const formData = useStoreState((state) => state.formData);
   return (
     <div className="Step-container">
       <span className="Step-number">Step 1/4</span>
@@ -10,7 +12,7 @@ export const Step1 = (props) => {
       <div className="Step1-body">
         <div
           className="Step1-body-checklist"
-          onChange={(event) => props.onChange(event.target.value)}
+          onChange={(event) => (formData.type = event.target.value)}
         >
           <div className="Step1-body-checklist-item">
             <input
@@ -68,6 +70,8 @@ export const Step1 = (props) => {
 };
 
 export const Step2 = (props) => {
+  const formData = useStoreState((state) => state.formData);
+
   return (
     <div className="Step-container">
       <span className="Step-number">Step 2/4</span>
@@ -78,7 +82,7 @@ export const Step2 = (props) => {
         <label className="Step2-body__label">Number of 60l bags:</label>
         <select
           className="Step2-body-select"
-          onChange={(event) => props.onChange(event.target.value)}
+          onChange={(event) => (formData.bags = event.target.value)}
         >
           <option value="0">- select -</option>
           <option value="1">1</option>
@@ -93,21 +97,14 @@ export const Step2 = (props) => {
 };
 
 export const Step3 = (props) => {
-  const [who, setWho] = useState([]);
-  const [organisation, setOrganisation] = useState([]);
-
-  useEffect(() => {
-    props.selectWhoToHelp(who);
-  }, [who]);
-
-  useEffect(() => {
-    props.selectOrganisation(organisation);
-  }, [organisation]);
+  const formData = useStoreState((state) => state.formData);
 
   const handleCheck = (value) => {
-    who.includes(value)
-      ? setWho(who.filter((word) => word !== value))
-      : setWho([...who, value]);
+    formData.helpGroups.includes(value)
+      ? (formData.helpGroups = formData.helpGroups.filter(
+          (group) => group !== value
+        ))
+      : (formData.helpGroups = [...formData.helpGroups, value]);
   };
 
   return (
@@ -116,7 +113,7 @@ export const Step3 = (props) => {
       <h2 className="Step-body__header">Location:</h2>
       <select
         className="Step3-body-select"
-        onChange={(event) => props.onChange(event.target.value)}
+        onChange={(event) => (formData.location = event.target.value)}
       >
         <option value="0">- select -</option>
         <option value="Poznań">Poznań</option>
@@ -170,7 +167,7 @@ export const Step3 = (props) => {
           className="Step3-body__input"
           type="text"
           name="organisation"
-          onChange={(event) => setOrganisation(event.target.value)}
+          onChange={(event) => (formData.organisation = event.target.value)}
         ></input>
       </h3>
     </div>
@@ -178,6 +175,8 @@ export const Step3 = (props) => {
 };
 
 export const Step4 = () => {
+  const formData = useStoreState((state) => state.formData);
+
   return (
     <div className="Step-container">
       <span className="Step-number">Step 4/4</span>
@@ -194,6 +193,7 @@ export const Step4 = () => {
               className="Step4-body-section-item__input"
               type="text"
               name="street"
+              onChange={(event) => (formData.street = event.target.value)}
             ></input>
           </div>
           <div className="Step4-body-section-item">
@@ -202,6 +202,7 @@ export const Step4 = () => {
               className="Step4-body-section-item__input"
               type="text"
               name="city"
+              onChange={(event) => (formData.city = event.target.value)}
             ></input>
           </div>
           <div className="Step4-body-section-item">
@@ -210,6 +211,7 @@ export const Step4 = () => {
               className="Step4-body-section-item__input"
               type="text"
               name="postcode"
+              onChange={(event) => (formData.postcode = event.target.value)}
             ></input>
           </div>
           <div className="Step4-body-section-item">
@@ -218,6 +220,7 @@ export const Step4 = () => {
               className="Step4-body-section-item__input"
               type="text"
               name="phone"
+              onChange={(event) => (formData.phone = event.target.value)}
             ></input>
           </div>
         </div>
@@ -230,6 +233,7 @@ export const Step4 = () => {
               className="Step4-body-section-item__input"
               type="text"
               name="day"
+              onChange={(event) => (formData.day = event.target.value)}
             ></input>
           </div>
           <div className="Step4-body-section-item">
@@ -238,6 +242,7 @@ export const Step4 = () => {
               className="Step4-body-section-item__input"
               type="text"
               name="time"
+              onChange={(event) => (formData.time = event.target.value)}
             ></input>
           </div>
           <div className="Step4-body-section-item">
@@ -246,7 +251,8 @@ export const Step4 = () => {
             </label>
             <textarea
               className="Step4-body-section-item__input notes-text"
-              name="street"
+              name="notes"
+              onChange={(event) => (formData.notes = event.target.value)}
             ></textarea>
           </div>
         </div>
@@ -255,8 +261,9 @@ export const Step4 = () => {
   );
 };
 
-export const Step5 = (props) => {
-  console.log(props.formData.street);
+export const Step5 = () => {
+  const formData = useStoreState((state) => state.formData);
+
   return (
     <div className="Step-container">
       <h2 className="Step-body__header">Summary of your donation</h2>
