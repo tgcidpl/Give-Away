@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { DecoratedHeader } from "../../DecoratedHeader/DecoratedHeader";
 import "./Steps.scss";
 import { useStoreState } from "easy-peasy";
 
@@ -69,7 +67,7 @@ export const Step1 = () => {
   );
 };
 
-export const Step2 = (props) => {
+export const Step2 = () => {
   const formData = useStoreState((state) => state.formData);
 
   return (
@@ -96,7 +94,7 @@ export const Step2 = (props) => {
   );
 };
 
-export const Step3 = (props) => {
+export const Step3 = () => {
   const formData = useStoreState((state) => state.formData);
 
   const handleCheck = (value) => {
@@ -265,30 +263,34 @@ export const Step5 = () => {
   const formData = useStoreState((state) => state.formData);
 
   return (
-    <div className="Step-container">
+    <div className="Step-container Step5-container">
       <h2 className="Step-body__header">Summary of your donation</h2>
       <h3 className="Step-body__minorHeader">You're donating:</h3>
-      <p>bags , , </p>
-      <p>location:</p>
+      <p className="Step-body__minorHeader summary">
+        {formData.bags} bags, {formData.type}, {formData.helpGroups.join(", ")}
+      </p>
+      <p className="Step-body__minorHeader location">
+        location: {formData.location}
+      </p>
       <div className="Step4-body">
         <div className="Step4-body-section">
           <h3 className="Step-body__minorHeader">Address for collection:</h3>
 
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Street</label>
-            <span>gfhhgf</span>
+            <span>{formData.street}</span>
           </div>
           <div className="Step4-body-section-item">
             <label className="Step-body__label">City</label>
-            <span>blabla</span>
+            <span>{formData.city}</span>
           </div>
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Postcode</label>
-            <span>blabla</span>
+            <span>{formData.postcode}</span>
           </div>
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Phone</label>
-            <span>blabla</span>
+            <span>{formData.phone}</span>
           </div>
         </div>
         <div className="Step4-body-section">
@@ -296,17 +298,17 @@ export const Step5 = () => {
 
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Day</label>
-            <span>blabla</span>
+            <span>{formData.day}</span>
           </div>
           <div className="Step4-body-section-item">
             <label className="Step-body__label">Time</label>
-            <span>blabla</span>
+            <span>{formData.time}</span>
           </div>
           <div className="Step4-body-section-item">
             <label className="Step-body__label notes-label">
               Delivery <br></br> notes
             </label>
-            <p>fasfas</p>
+            <p>{formData.notes}</p>
           </div>
         </div>
       </div>
@@ -316,11 +318,11 @@ export const Step5 = () => {
 
 export const Step6 = () => {
   return (
-    <div>
-      <DecoratedHeader
-        text1={"Thank you for submitting the form"}
-        text2={"We will send the details regarding collection via email"}
-      />
+    <div className="Step6-body">
+      <p>
+        Thank you for submitting the form<br></br>We will send the details
+        <br></br> regarding collection via email
+      </p>
     </div>
   );
 };
