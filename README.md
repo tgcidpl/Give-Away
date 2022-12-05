@@ -1,5 +1,6 @@
 # Give-Away
-Website dedicated to easy donations and give-aways. Based on a project in Adobe XD.
+Website dedicated to easy donations and give-aways.
+Based on a project in Adobe XD.
 
 Technologies: REACT SCSS Vite Eeasy-Peasy
 
