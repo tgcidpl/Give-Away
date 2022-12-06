@@ -1,3 +1,5 @@
+@import "../../scss/settings/breakpoints.scss";
+
 .NavHeader {
   max-width: 1758px;
   height: 100vh;
@@ -9,9 +11,23 @@
     background-size: cover;
     background-position-x: 100%;
     background-repeat: no-repeat;
+
+    @include L {
+      width: 100%;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
   }
   &-header {
     width: 45%;
     height: 100vh;
+    @include L {
+      width: 100%;
+    }
   }
 }

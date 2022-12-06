@@ -1,4 +1,5 @@
-@import '../../scss/settings/colors.scss';
+@import "../../scss/settings/colors.scss";
+@import "../../scss/settings/breakpoints.scss";
 
 .LargeBtn {
   display: flex;
@@ -13,7 +14,11 @@
   justify-content: center;
   line-height: 3rem;
   padding: 0 4rem;
-  &:hover{
+  @include M {
+    scale: 70%;
+    margin: 0;
+  }
+  &:hover {
     background-color: $accentColor;
   }
 }

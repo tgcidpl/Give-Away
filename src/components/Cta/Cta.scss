@@ -1,6 +1,7 @@
+@import "../../scss/settings/breakpoints.scss";
+
 .Cta {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
@@ -9,5 +10,8 @@
     margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
+    @include M {
+      display: block;
+    }
   }
 }
