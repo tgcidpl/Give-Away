@@ -1,5 +1,6 @@
-@import '../../scss/settings/fonts.scss';
-@import '../../scss/settings/colors.scss';
+@import "../../scss/settings/fonts.scss";
+@import "../../scss/settings/colors.scss";
+@import "../../scss/settings/breakpoints.scss";
 
 .ThreeColumns {
   display: flex;
@@ -7,8 +8,13 @@
   height: 24rem;
   width: 100vw;
   background-image: url(../../assets/3-Columns-Background.png);
+  @include M {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
   &-column {
-    margin-top: 2.85rem;
+    margin: 2.85rem;
     max-width: 20rem;
     &__number {
       font-size: 5.6rem;
@@ -19,7 +25,7 @@
       font-size: 1.2rem;
     }
     &__text {
-font-family: $font-alt;
+      font-family: $font-alt;
       margin-top: 1.5rem;
     }
   }
