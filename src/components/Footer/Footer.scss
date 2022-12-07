@@ -1,3 +1,5 @@
+@import "../../scss/settings/breakpoints.scss";
+
 @mixin icon {
   display: block;
   width: 30px;
@@ -10,15 +12,27 @@
   transform: translate(0, -150%);
   display: flex;
   justify-content: space-between;
+  @include M {
+    justify-content: space-around;
+  }
   &-copyright {
     margin-left: 50%;
     transform: translate(-50%);
+    @include M {
+      margin-left: 5rem;
+      transform: none;
+      font-size: 0.7rem;
+    }
   }
   &-links {
     display: flex;
     gap: 1rem;
     margin-right: 7rem;
     transform: translate(0, -50%);
+    @include M {
+      margin-left: 6rem;
+      transform: none;
+    }
     &__facebook {
       @include icon;
       background-image: url(../../assets/Facebook.svg);
