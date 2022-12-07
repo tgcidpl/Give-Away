@@ -40,9 +40,8 @@
     background-image: url(../../assets/People.jpg);
     background-size: cover;
     @include M {
-      opacity: 0.3;
       width: auto;
-      height: 30vh;
+      height: 50vh;
     }
   }
 }
