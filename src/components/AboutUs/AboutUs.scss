@@ -1,10 +1,16 @@
 @import "../../scss/settings/colors.scss";
+@import "../../scss/settings/breakpoints.scss";
 
 .AboutUs {
   display: flex;
   background-color: $lightBackgroundColor;
   height: 100vh;
   align-items: center;
+
+  @include M {
+    display: block;
+    height: auto;
+  }
   &-description {
     width: 50vw;
     > p {
@@ -13,11 +19,19 @@
       margin: 1rem 6rem;
       letter-spacing: -0.6px;
       line-height: 2.5rem;
+      @include M {
+        font-size: 1rem;
+      }
       &::after {
         content: url(../../assets/Signature.svg);
         position: absolute;
         transform: translate(-60%, 40%);
       }
+    }
+    @include M {
+      width: auto;
+      padding: 3rem 0;
+      margin-bottom: 7rem;
     }
   }
   &-image {
@@ -25,5 +39,10 @@
     height: 100vh;
     background-image: url(../../assets/People.jpg);
     background-size: cover;
+    @include M {
+      opacity: 0.3;
+      width: auto;
+      height: 30vh;
+    }
   }
 }
