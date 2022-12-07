@@ -1,8 +1,12 @@
 @import "../../../scss/settings/colors.scss";
 @import "../../../scss/settings/fonts.scss";
+@import "../../../scss/settings/breakpoints.scss";
 
 .TabPrint {
   margin: 0 12rem;
+  @include M {
+    margin: 0 2rem;
+  }
   :nth-child(3) {
     border-bottom: 1px solid transparent;
   }
@@ -17,13 +21,25 @@
     margin-top: 1.5rem;
     padding: 1.5rem 0;
     line-height: 2rem;
+    @include M {
+      font-size: 0.9rem;
+    }
     &-info {
       > h3 {
         font-size: 1.5rem;
+        @include M {
+          font-size: 1.2rem;
+        }
+      }
+      > p {
+        margin-right: 1rem;
       }
     }
     &-items {
       margin-top: 0.8rem;
+      @include M {
+        font-size: 0.7rem;
+      }
     }
   }
 }
