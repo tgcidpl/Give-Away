@@ -1,4 +1,6 @@
 @import "../../scss/settings/colors.scss";
+@import "../../scss/settings/breakpoints.scss";
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -17,18 +19,39 @@
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.3;
+    @include M {
+      width: 100vw;
+      opacity: 0.2;
+    }
   }
   &-form {
     width: 45vw;
+    @include M {
+      position: absolute;
+      width: auto;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
     &-data {
       display: flex;
       flex-direction: column;
       width: 30vw;
       margin: 0 auto;
       line-height: 2rem;
+
+      @include L {
+        line-height: 1rem;
+      }
+      @include M {
+        width: auto;
+      }
+
       &-info {
         display: flex;
         justify-content: space-between;
+        @include L {
+          display: block;
+        }
         &__field {
           font-size: 1.1rem;
           border: transparent;
@@ -52,6 +75,10 @@
         padding: 0.6rem 0.5rem;
         border: 1px solid;
         border-color: $quaternaryColor;
+        @include M {
+          background-color: #ffffff;
+          margin: 0 auto;
+        }
         &:hover {
           background-color: $accentColor;
           cursor: pointer;
