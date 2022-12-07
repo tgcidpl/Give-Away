@@ -11,15 +11,22 @@
   @include M {
     flex-direction: column;
     height: auto;
+    width: auto;
     align-items: center;
   }
   &-column {
     margin: 2.85rem;
     max-width: 20rem;
+    @include M {
+      margin: 2rem;
+    }
     &__number {
       font-size: 5.6rem;
       padding: 2rem;
       color: $largeTextColor;
+      @include M {
+        font-size: 4rem;
+      }
     }
     &__title {
       font-size: 1.2rem;
@@ -27,6 +34,9 @@
     &__text {
       font-family: $font-alt;
       margin-top: 1.5rem;
+      @include M {
+        margin-top: 2rem;
+      }
     }
   }
 }
