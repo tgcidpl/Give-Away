@@ -1,14 +1,15 @@
-@import '../../scss/settings/fonts.scss';
-@import '../../scss/settings/colors.scss';
+@import "../../scss/settings/fonts.scss";
+@import "../../scss/settings/colors.scss";
+@import "../../scss/settings/breakpoints.scss";
 
 @mixin before-setting {
-  content: '';
-          width: 5.2rem;
-          height: 5.2rem;
-          top: -6rem;
-          left: 50%;
-          position: absolute;
-          transform: translate(-50%);
+  content: "";
+  width: 5.2rem;
+  height: 5.2rem;
+  top: -6rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
 }
 
 .WhatsItAbout {
@@ -18,10 +19,17 @@
     align-items: center;
     height: 20rem;
     background-color: $lightBackgroundColor;
-
+    @include M {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
     &-column {
       margin-top: 4rem;
       width: 8rem;
+      @include M {
+        margin-top: 8rem;
+      }
       &__title {
         position: relative;
         margin-bottom: 1rem;
@@ -29,6 +37,9 @@
       &__text {
         position: relative;
         margin-top: 1rem;
+        @include M {
+          margin-bottom: 2rem;
+        }
         &::before {
           @include before-setting;
           width: 4rem;
@@ -48,26 +59,26 @@
 }
 
 .title1 {
-        &::before {
-          @include before-setting;
-          background-image: url(../../assets/Icon-1.svg);
-        }
+  &::before {
+    @include before-setting;
+    background-image: url(../../assets/Icon-1.svg);
+  }
 }
 .title2 {
-        &::before {
-          @include before-setting;
-          background-image: url(../../assets/Icon-2.svg);
-        }
+  &::before {
+    @include before-setting;
+    background-image: url(../../assets/Icon-2.svg);
+  }
 }
 .title3 {
-        &::before {
-          @include before-setting;
-          background-image: url(../../assets/Icon-3.svg);
-        }
+  &::before {
+    @include before-setting;
+    background-image: url(../../assets/Icon-3.svg);
+  }
 }
 .title4 {
-        &::before {
-          @include before-setting;
-          background-image: url(../../assets/Icon-4.svg);
-        }
+  &::before {
+    @include before-setting;
+    background-image: url(../../assets/Icon-4.svg);
+  }
 }
