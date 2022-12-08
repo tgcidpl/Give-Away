@@ -17,21 +17,100 @@
       }
     }
   }
-  &-nav {
+  &-navbar {
     display: flex;
     justify-content: flex-end;
-    margin-top: 1.4rem;
+    &-list {
+      display: flex;
+      margin-top: 1.4rem;
+      @include M {
+        position: absolute;
+        flex-direction: column;
+        background-color: #ffffff;
+        margin-top: 3.3rem;
+        margin-right: 1rem;
+        line-height: 2rem;
+        display: none;
+      }
 
-    &__link {
-      font-size: 1.1rem;
-      padding: 0.6rem 0.9rem;
-      border: 1px solid transparent;
-      white-space: nowrap;
+      &__link {
+        font-size: 1.1rem;
+        padding: 0.6rem 0.9rem;
+        border: 1px solid transparent;
+        white-space: nowrap;
 
-      &:hover {
-        cursor: pointer;
-        border: 1px solid $textColor;
+        @include M {
+          display: block;
+          width: 100vw;
+        }
+
+        &:hover {
+          cursor: pointer;
+          border: 1px solid $textColor;
+        }
       }
     }
   }
+}
+
+.Menu-navbar-toggle-button {
+  --gap: 0.5rem;
+  --width: 2.7rem;
+  --thickness: 0.2rem;
+  --clickable-pseudo-margin: 0.2rem;
+  appearance: none;
+  display: none;
+  position: relative;
+  cursor: pointer;
+  border: solid transparent;
+  border-width: calc(
+      var(--gap) + var(--thickness) + var(--clickable-pseudo-margin)
+    )
+    var(--clickable-pseudo-margin);
+  box-sizing: content-box;
+  background-clip: padding-box;
+  margin: 1rem;
+  @include M {
+    display: block;
+  }
+  &:checked {
+    background-color: transparent;
+  }
+
+  &,
+  &::before,
+  &::after {
+    height: var(--thickness);
+    width: var(--width);
+    background-color: $textColor;
+    transition: 0.5s;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    bottom: calc(100% + var(--gap));
+  }
+
+  &:checked::before {
+    bottom: 50%;
+    transform: translateY(50%) rotate(45deg);
+  }
+
+  &::after {
+    top: calc(100% + var(--gap));
+  }
+
+  &:checked::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+.active {
+  display: block;
 }
