@@ -1,4 +1,5 @@
 @import "../../scss/settings/colors.scss";
+@import "../../scss/settings/breakpoints.scss";
 
 .Form-container {
   height: auto;
@@ -19,6 +20,12 @@
   justify-content: center;
   line-height: 3rem;
   padding: 0 4rem;
+  @include M {
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.6rem;
+  }
   &:hover {
     background-color: $accentColor;
     cursor: pointer;
@@ -28,4 +35,7 @@
 .Form-nav {
   display: flex;
   margin-left: 8rem;
+  @include M {
+    margin-left: 2rem;
+  }
 }

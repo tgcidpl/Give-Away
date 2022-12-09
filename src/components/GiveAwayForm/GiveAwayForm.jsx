@@ -9,8 +9,6 @@ export const GiveAwayForm = () => {
 
   const formData = useStoreState((state) => state.formData);
 
-  console.log(formData);
-
   const NavButton = ({ text, step }) => {
     return (
       <div onClick={() => setStep(step)} className="NavBtn">
