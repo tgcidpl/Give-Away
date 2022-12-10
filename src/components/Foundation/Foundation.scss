@@ -27,9 +27,11 @@
         font-size: 1.2rem;
         padding: 0;
       }
-      &:hover {
-        background-color: $accentColor;
-        cursor: pointer;
+      @media (min-width: 428px) {
+        &:hover {
+          background-color: $accentColor;
+          cursor: pointer;
+        }
       }
     }
   }

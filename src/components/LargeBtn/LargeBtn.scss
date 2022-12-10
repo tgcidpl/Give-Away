@@ -18,7 +18,9 @@
     scale: 70%;
     margin: 0;
   }
-  &:hover {
-    background-color: $accentColor;
+  @media (min-width: 428px) {
+    &:hover {
+      background-color: $accentColor;
+    }
   }
 }

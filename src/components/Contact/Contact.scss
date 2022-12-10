@@ -79,9 +79,11 @@
           background-color: #ffffff;
           margin: 0 auto;
         }
-        &:hover {
-          background-color: $accentColor;
-          cursor: pointer;
+        @media (min-width: 428px) {
+          &:hover {
+            background-color: $accentColor;
+            cursor: pointer;
+          }
         }
       }
     }

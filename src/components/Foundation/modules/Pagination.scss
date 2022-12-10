@@ -12,9 +12,11 @@
     padding: 0.6rem 0.5rem;
     border: 1px solid;
     border-color: $quaternaryColor;
-    &:hover {
-      background-color: $accentColor;
-      cursor: pointer;
+    @media (min-width: 428px) {
+      &:hover {
+        background-color: $accentColor;
+        cursor: pointer;
+      }
     }
   }
 }

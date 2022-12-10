@@ -75,8 +75,10 @@
         @include M {
           margin-left: 1rem;
         }
-        &:hover {
-          background-color: $accentColor;
+        @media (min-width: 428px) {
+          &:hover {
+            background-color: $accentColor;
+          }
         }
         &:checked {
           background-color: $accentColor;
@@ -107,8 +109,10 @@
       width: 6rem;
       font-size: 1rem;
     }
-    &:hover {
-      background-color: $accentColor;
+    @media (min-width: 428px) {
+      &:hover {
+        background-color: $accentColor;
+      }
     }
   }
 }
@@ -125,8 +129,10 @@
       margin-left: 1rem;
       font-size: 1rem;
     }
-    &:hover {
-      background-color: $accentColor;
+    @media (min-width: 428px) {
+      &:hover {
+        background-color: $accentColor;
+      }
     }
   }
   &-checkboxes {
@@ -143,8 +149,10 @@
       @include M {
         margin: 0.5rem 0.5rem 0 0;
       }
-      &:hover {
-        background-color: $accentColor;
+      @media (min-width: 428px) {
+        &:hover {
+          background-color: $accentColor;
+        }
       }
       &:checked {
         background-color: $accentColor;
