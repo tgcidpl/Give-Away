@@ -29,7 +29,7 @@
       width: 100%;
     }
     &-steps {
-      margin-top: 8rem;
+      margin-top: 4rem;
       margin-right: 10rem;
       @include L {
         width: 100%;
@@ -62,8 +62,8 @@
             &::after {
               content: "";
               position: absolute;
-              width: 8rem;
-              height: 8rem;
+              width: 7rem;
+              height: 7rem;
               border: 1px solid;
               rotate: 45deg;
               top: 0;

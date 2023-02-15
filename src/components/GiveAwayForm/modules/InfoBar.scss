@@ -2,20 +2,23 @@
 @import "../../../scss/settings/breakpoints.scss";
 
 .InfoBar {
-  height: 10rem;
+  height: 22vh;
   background-color: $accentColor;
   text-align: left;
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @include M {
     height: auto;
   }
   &__header {
     margin-left: 8rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
     @include M {
-      font-size: 1.5rem;
+      font-size: 1rem;
       margin-left: 2rem;
     }
   }
