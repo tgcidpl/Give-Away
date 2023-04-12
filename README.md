@@ -2,7 +2,7 @@
 Website dedicated to easy donations and give-aways.
 Based on a project in Adobe XD.
 
-Technologies: REACT SCSS Vite Eeasy-Peasy
+Technologies: REACT SCSS Vite Easy-Peasy
 
 Terminal: npm install -> npm run dev
 
